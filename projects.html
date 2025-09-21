@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Projects - Samyueru Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="light">
+  <!-- Header -->
+  <header id="header" class="header">
+    <nav class="container nav-container">
+      <div class="logo-container">
+        <div class="logo">
+          <a href="index.html" style="text-decoration:none; color:inherit;"><span class="romaji">Samyueru</span></a>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="sun-icon">☀</span>
+          <span class="moon-icon">🌙</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects" style="padding-top: 8rem;">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">My Portfolio</h2>
+        <p class="section-subtitle">A collection of my latest web development and IT-related works.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="card-image">
+            <div class="image-placeholder web-bg"><div class="project-icon">📋</div></div>
+          </div>
+          <div class="card-content">
+            <div class="project-badge">Web App</div>
+            <h3 class="project-title">To-Do Plus</h3>
+            <p class="project-description">
+              Advanced task manager with drag-and-drop functionality, categories, and progress tracking.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-image">
+            <div class="image-placeholder web-bg"><div class="project-icon">🌤️</div></div>
+          </div>
+          <div class="card-content">
+            <div class="project-badge">API Integration</div>
+            <h3 class="project-title">Weather Now</h3>
+            <p class="project-description">
+              Real-time weather application with beautiful animations and location-based forecasting.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

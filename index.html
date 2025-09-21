@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Samyueru - Web Developer & Computer Technician</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-theme="light">
   <!-- Loading Screen -->
@@ -30,10 +30,6 @@
       </div>
 
       <ul class="nav-links">
-        <li><a href="#home" data-scroll="home">Home</a></li>
-        <li><a href="#about" data-scroll="about">About</a></li>
-        <li><a href="#projects" data-scroll="projects">Projects</a></li>
-        <li><a href="#contact" data-scroll="contact">Contact</a></li>
       </ul>
 
       <div class="nav-controls">
@@ -63,154 +59,15 @@
         </p>
 
         <div class="hero-actions">
-          <button class="cta-button primary" data-scroll="projects">
+          <a href="projects.html" class="cta-button primary">
             <span>View My Work</span>
             <div class="button-ripple"></div>
-          </button>
-          <button class="cta-button secondary" id="resumeBtn">
+          </a>
+          <!-- Resume Link -->
+          <a href="pdf/Samuel.pdf" class="cta-button secondary" target="_blank">
             <span>Resume</span>
-          </button>
+          </a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">About Me</h2>
-        <div class="title-decoration"></div>
-      </div>
-
-      <div class="about-content">
-        <div class="about-card">
-          <div class="card-header">
-            <div class="profile-image">
-              <div class="avatar-container">
-                <div class="avatar">S</div>
-                <div class="avatar-ring"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-body">
-            <div class="about-text">
-              <p class="intro-text">
-                IT Graduate majoring in Software Development with 2 years of freelance web development experience.  
-                Also skilled as a Computer Technician providing hardware/software troubleshooting and IT support.
-              </p>
-            </div>
-
-            <div class="skills-section">
-              <h3 class="skills-title">Skills</h3>
-              <div class="skills-grid">
-                <div class="skill-item" data-level="90">
-                  <div class="skill-icon">🌐</div>
-                  <div class="skill-info">
-                    <span class="skill-name">HTML/CSS</span>
-                    <div class="skill-bar"><div class="skill-progress"></div></div>
-                  </div>
-                </div>
-                <div class="skill-item" data-level="85">
-                  <div class="skill-icon">⚡</div>
-                  <div class="skill-info">
-                    <span class="skill-name">JavaScript</span>
-                    <div class="skill-bar"><div class="skill-progress"></div></div>
-                  </div>
-                </div>
-                <div class="skill-item" data-level="80">
-                  <div class="skill-icon">🖥️</div>
-                  <div class="skill-info">
-                    <span class="skill-name">Computer Repair</span>
-                    <div class="skill-bar"><div class="skill-progress"></div></div>
-                  </div>
-                </div>
-                <div class="skill-item" data-level="75">
-                  <div class="skill-icon">🔧</div>
-                  <div class="skill-info">
-                    <span class="skill-name">Troubleshooting</span>
-                    <div class="skill-bar"><div class="skill-progress"></div></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">My Projects</h2>
-        <p class="section-subtitle">A collection of my latest web development and IT-related works.</p>
-      </div>
-
-      <div class="projects-grid">
-        <article class="project-card">
-          <div class="card-image">
-            <div class="image-placeholder web-bg"><div class="project-icon">📋</div></div>
-          </div>
-          <div class="card-content">
-            <div class="project-badge">Web App</div>
-            <h3 class="project-title">To-Do Plus</h3>
-            <p class="project-description">
-              Advanced task manager with drag-and-drop functionality, categories, and progress tracking.
-            </p>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="card-image">
-            <div class="image-placeholder web-bg"><div class="project-icon">🌤️</div></div>
-          </div>
-          <div class="card-content">
-            <div class="project-badge">API Integration</div>
-            <h3 class="project-title">Weather Now</h3>
-            <p class="project-description">
-              Real-time weather application with beautiful animations and location-based forecasting.
-            </p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Let's collaborate on projects or IT solutions.</p>
-      </div>
-
-      <div class="contact-content">
-        <form id="contactForm" class="contact-form">
-          <h3 class="form-title">Send a Message</h3>
-          <div class="form-group">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" name="name" required>
-            <div class="form-underline"></div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" name="email" required>
-            <div class="form-underline"></div>
-          </div>
-          <div class="form-group">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" name="message" required></textarea>
-            <div class="form-underline"></div>
-          </div>
-          <button type="submit" class="submit-btn">
-            <span>Send Message</span>
-            <div class="button-ripple"></div>
-          </button>
-          <div id="formMessage" class="form-message"></div>
-        </form>
       </div>
     </div>
   </section>

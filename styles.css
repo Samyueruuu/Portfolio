@@ -1626,3 +1626,29 @@ body.about-dark .about-quote {
     color: var(--text-dark-secondary);
     border-left-color: var(--primary);
 }
+
+/* Small Home Button */
+.home-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.home-btn:hover {
+  background: var(--accent);
+  transform: scale(1.1);
+}

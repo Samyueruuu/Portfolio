@@ -1465,3 +1465,164 @@ section {
         page-break-inside: avoid;
     }
 }
+
+/* ========== About Me Page Styles ========== */
+.about-page {
+    background: var(--paper);
+    padding: 8rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-page::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: float 10s ease-in-out infinite;
+}
+
+.about-page .container {
+    max-width: 950px;
+    margin: 0 auto;
+    background: var(--paper);
+    border-radius: 25px;
+    box-shadow: 0 15px 50px var(--shadow);
+    padding: 4rem;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-page .container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px var(--shadow);
+}
+
+/* Heading with Kanji + Brush Stroke */
+.about-page h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.about-page h1::after {
+    content: "私について"; /* Watashi ni tsuite (About Me) */
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 0.5rem;
+    letter-spacing: 0.15em;
+}
+
+/* Paragraphs */
+.about-page p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 1.8rem;
+    color: var(--text-primary);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.about-page p:hover {
+    transform: translateX(8px);
+}
+
+.about-page strong {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Decorative Quote Style */
+.about-quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    text-align: center;
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary);
+    background: rgba(229, 57, 53, 0.05);
+    border-radius: 0 10px 10px 0;
+    margin-top: 2rem;
+    color: var(--text-secondary);
+    transition: background 0.3s ease;
+}
+
+.about-quote:hover {
+    background: rgba(229, 57, 53, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-page .container {
+        padding: 2.5rem 1.5rem;
+    }
+    .about-page h1 {
+        font-size: 2.2rem;
+    }
+    .about-page p {
+        font-size: 1rem;
+    }
+}
+
+/* Force Dark Theme on About Page */
+body.about-dark {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.about-dark .about-page {
+    background: var(--paper-dark);
+}
+
+body.about-dark .about-page .container {
+    background: var(--paper-dark);
+    color: var(--text-dark);
+    box-shadow: 0 15px 50px var(--shadow-dark);
+}
+
+body.about-dark .about-page h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--text-dark); /* Always visible (white text) */
+    position: relative;
+}
+
+/* Optional gradient underline instead of gradient text */
+body.about-dark .about-page h1::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--gradient-primary);
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+
+
+body.about-dark .about-page p {
+    color: var(--text-dark-secondary);
+}
+
+body.about-dark .about-quote {
+    background: rgba(229, 57, 53, 0.15);
+    color: var(--text-dark-secondary);
+    border-left-color: var(--primary);
+}
